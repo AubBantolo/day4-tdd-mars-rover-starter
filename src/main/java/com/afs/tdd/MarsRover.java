@@ -13,17 +13,19 @@ public class MarsRover {
     public void executeCommand(Command... givenCommands) {
         Arrays.stream(givenCommands).forEachOrdered(givenCommand -> {
             if (givenCommand == Command.MOVE) {
-                if (location.getDirection() == Direction.NORTH) {
-                    location.setY(location.getY() + 1);
-                }
-                else if (location.getDirection() == Direction.SOUTH) {
-                    location.setY(location.getY() - 1);
-                }
-                else if (location.getDirection() == Direction.EAST) {
-                    location.setX(location.getX() + 1);
-                }
-                else if (location.getDirection() == Direction.WEST) {
-                    location.setX(location.getX() - 1);
+                switch (location.getDirection()) {
+                    case NORTH:
+                        location.incrementY();
+                        break;
+                    case SOUTH:
+                        location.decrementY();
+                        break;
+                    case EAST:
+                        location.incrementX();
+                        break;
+                    case WEST:
+                        location.decrementX();
+                        break;
                 }
             }
 

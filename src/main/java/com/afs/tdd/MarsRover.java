@@ -48,21 +48,15 @@ public class MarsRover {
 
         if(givenCommand == Command.TURN_RIGHT) {
             if(location.getDirection() == Direction.WEST){
-
                 location.setDirection(Direction.EAST);
             }
-
-            if(location.getDirection() == Direction.EAST){
-
+            else if(location.getDirection() == Direction.EAST){
                 location.setDirection(Direction.WEST);
             }
-
-            if(location.getDirection() == Direction.NORTH){
-
+            else if(location.getDirection() == Direction.NORTH){
                 location.setDirection(Direction.SOUTH);
             }
-
-            if(location.getDirection() == Direction.SOUTH){
+            else if(location.getDirection() == Direction.SOUTH){
                 location.setDirection(Direction.NORTH);
             }
         }

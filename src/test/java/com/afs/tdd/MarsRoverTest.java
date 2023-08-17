@@ -80,9 +80,9 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_change_to_location_0_0_W_when_executeCommand_given_0_0_East_and_command_Turn_Right() {
+    void should_change_to_location_0_0_W_when_executeCommand_given_0_0_South_and_command_Turn_Right() {
         // Given
-        Location initialLocation = new Location(0, 0, Direction.EAST);
+        Location initialLocation = new Location(0, 0, Direction.SOUTH);
         Command givenCommand = Command.TURN_RIGHT;
         MarsRover marsRover = new MarsRover(initialLocation);
         // When

@@ -183,4 +183,21 @@ class MarsRoverTest {
         Assertions.assertEquals(0 , currentLocation.getY());
         Assertions.assertEquals(Direction.NORTH , currentLocation.getDirection());
     }
+
+    @Test
+    void should_change_to_location_Negative_1_1_N_given_location_0_0_N_when_execute_command_M_L_M_R(){
+        // Given
+        Location initialLocation = new Location(0, 0, Direction.NORTH);
+        MarsRover marsRover = new MarsRover(initialLocation);
+        // When
+        marsRover.executeCommand(Command.MOVE
+                , Command.TURN_LEFT
+                , Command.MOVE
+                , Command.TURN_RIGHT);
+        Location currentLocation = marsRover.getCurrentLocation();
+        // Then
+        Assertions.assertEquals(-1, currentLocation.getX());
+        Assertions.assertEquals(1, currentLocation.getY());
+        Assertions.assertEquals(Direction.NORTH , currentLocation.getDirection());
+    }
 }

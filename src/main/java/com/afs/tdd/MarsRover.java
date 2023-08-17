@@ -61,6 +61,10 @@ public class MarsRover {
             if(location.getDirection() == Direction.NORTH){
                 location.setDirection(Direction.SOUTH);
             }
+
+            if(location.getDirection() == Direction.SOUTH){
+                location.setDirection(Direction.NORTH);
+            }
         }
     }
 

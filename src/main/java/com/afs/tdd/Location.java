@@ -21,6 +21,22 @@ public class Location {
         this.y = y;
     }
 
+    public void incrementY() {
+        this.y++;
+    }
+
+    public void decrementY() {
+        this.y--;
+    }
+
+    public void incrementX() {
+        this.x++;
+    }
+
+    public void decrementX() {
+        this.x--;
+    }
+
     public void setDirection(Direction direction) {
         this.direction = direction;
     }

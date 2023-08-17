@@ -10,8 +10,9 @@ class MarsRoverTest {
         Location initialLocation = new Location(0, 0, Direction.NORTH);
         Command givenCommand = Command.MOVE;
         MarsRover marsRover = new MarsRover(initialLocation);
+        MarsRoverCommandExecutor marsRoverCommandExecutor = new MarsRoverCommandExecutor(marsRover);
         // When
-        marsRover.executeCommand(givenCommand);
+        marsRoverCommandExecutor.commandMarsRover(givenCommand);
         Location currentLocation = marsRover.getCurrentLocation();
         // Then
         Assertions.assertEquals(0 , currentLocation.getX());
@@ -26,7 +27,9 @@ class MarsRoverTest {
         Command givenCommand = Command.TURN_LEFT;
         MarsRover marsRover = new MarsRover(initialLocation);
         // When
-        marsRover.executeCommand(givenCommand);
+        MarsRoverCommandExecutor marsRoverCommandExecutor = new MarsRoverCommandExecutor(marsRover);
+        // When
+        marsRoverCommandExecutor.commandMarsRover(givenCommand);
         Location currentLocation = marsRover.getCurrentLocation();
         // Then
         Assertions.assertEquals(0 , currentLocation.getX());
@@ -41,7 +44,9 @@ class MarsRoverTest {
         Command givenCommand = Command.TURN_RIGHT;
         MarsRover marsRover = new MarsRover(initialLocation);
         // When
-        marsRover.executeCommand(givenCommand);
+        MarsRoverCommandExecutor marsRoverCommandExecutor = new MarsRoverCommandExecutor(marsRover);
+        // When
+        marsRoverCommandExecutor.commandMarsRover(givenCommand);
         Location currentLocation = marsRover.getCurrentLocation();
         // Then
         Assertions.assertEquals(0 , currentLocation.getX());
@@ -56,7 +61,9 @@ class MarsRoverTest {
         Command givenCommand = Command.MOVE;
         MarsRover marsRover = new MarsRover(initialLocation);
         // When
-        marsRover.executeCommand(givenCommand);
+        MarsRoverCommandExecutor marsRoverCommandExecutor = new MarsRoverCommandExecutor(marsRover);
+        // When
+        marsRoverCommandExecutor.commandMarsRover(givenCommand);
         Location currentLocation = marsRover.getCurrentLocation();
         // Then
         Assertions.assertEquals(0 , currentLocation.getX());
@@ -71,7 +78,9 @@ class MarsRoverTest {
         Command givenCommand = Command.TURN_LEFT;
         MarsRover marsRover = new MarsRover(initialLocation);
         // When
-        marsRover.executeCommand(givenCommand);
+        MarsRoverCommandExecutor marsRoverCommandExecutor = new MarsRoverCommandExecutor(marsRover);
+        // When
+        marsRoverCommandExecutor.commandMarsRover(givenCommand);
         Location currentLocation = marsRover.getCurrentLocation();
         // Then
         Assertions.assertEquals(0 , currentLocation.getX());
@@ -86,7 +95,9 @@ class MarsRoverTest {
         Command givenCommand = Command.TURN_RIGHT;
         MarsRover marsRover = new MarsRover(initialLocation);
         // When
-        marsRover.executeCommand(givenCommand);
+        MarsRoverCommandExecutor marsRoverCommandExecutor = new MarsRoverCommandExecutor(marsRover);
+        // When
+        marsRoverCommandExecutor.commandMarsRover(givenCommand);
         Location currentLocation = marsRover.getCurrentLocation();
         // Then
         Assertions.assertEquals(0 , currentLocation.getX());
@@ -101,7 +112,9 @@ class MarsRoverTest {
         Command givenCommand = Command.MOVE;
         MarsRover marsRover = new MarsRover(initialLocation);
         // When
-        marsRover.executeCommand(givenCommand);
+        MarsRoverCommandExecutor marsRoverCommandExecutor = new MarsRoverCommandExecutor(marsRover);
+        // When
+        marsRoverCommandExecutor.commandMarsRover(givenCommand);
         Location currentLocation = marsRover.getCurrentLocation();
         // Then
         Assertions.assertEquals(1 , currentLocation.getX());
@@ -116,7 +129,9 @@ class MarsRoverTest {
         Command givenCommand = Command.TURN_LEFT;
         MarsRover marsRover = new MarsRover(initialLocation);
         // When
-        marsRover.executeCommand(givenCommand);
+        MarsRoverCommandExecutor marsRoverCommandExecutor = new MarsRoverCommandExecutor(marsRover);
+        // When
+        marsRoverCommandExecutor.commandMarsRover(givenCommand);
         Location currentLocation = marsRover.getCurrentLocation();
         // Then
         Assertions.assertEquals(0 , currentLocation.getX());
@@ -131,7 +146,9 @@ class MarsRoverTest {
         Command givenCommand = Command.TURN_RIGHT;
         MarsRover marsRover = new MarsRover(initialLocation);
         // When
-        marsRover.executeCommand(givenCommand);
+        MarsRoverCommandExecutor marsRoverCommandExecutor = new MarsRoverCommandExecutor(marsRover);
+        // When
+        marsRoverCommandExecutor.commandMarsRover(givenCommand);
         Location currentLocation = marsRover.getCurrentLocation();
         // Then
         Assertions.assertEquals(0 , currentLocation.getX());
@@ -146,7 +163,9 @@ class MarsRoverTest {
         Command givenCommand = Command.MOVE;
         MarsRover marsRover = new MarsRover(initialLocation);
         // When
-        marsRover.executeCommand(givenCommand);
+        MarsRoverCommandExecutor marsRoverCommandExecutor = new MarsRoverCommandExecutor(marsRover);
+        // When
+        marsRoverCommandExecutor.commandMarsRover(givenCommand);
         Location currentLocation = marsRover.getCurrentLocation();
         // Then
         Assertions.assertEquals(-1 , currentLocation.getX());
@@ -161,7 +180,9 @@ class MarsRoverTest {
         Command givenCommand = Command.TURN_LEFT;
         MarsRover marsRover = new MarsRover(initialLocation);
         // When
-        marsRover.executeCommand(givenCommand);
+        MarsRoverCommandExecutor marsRoverCommandExecutor = new MarsRoverCommandExecutor(marsRover);
+        // When
+        marsRoverCommandExecutor.commandMarsRover(givenCommand);
         Location currentLocation = marsRover.getCurrentLocation();
         // Then
         Assertions.assertEquals(0 , currentLocation.getX());
@@ -176,7 +197,9 @@ class MarsRoverTest {
         Command givenCommand = Command.TURN_RIGHT;
         MarsRover marsRover = new MarsRover(initialLocation);
         // When
-        marsRover.executeCommand(givenCommand);
+        MarsRoverCommandExecutor marsRoverCommandExecutor = new MarsRoverCommandExecutor(marsRover);
+        // When
+        marsRoverCommandExecutor.commandMarsRover(givenCommand);
         Location currentLocation = marsRover.getCurrentLocation();
         // Then
         Assertions.assertEquals(0 , currentLocation.getX());
@@ -190,7 +213,9 @@ class MarsRoverTest {
         Location initialLocation = new Location(0, 0, Direction.NORTH);
         MarsRover marsRover = new MarsRover(initialLocation);
         // When
-        marsRover.executeCommand(Command.MOVE
+        MarsRoverCommandExecutor marsRoverCommandExecutor = new MarsRoverCommandExecutor(marsRover);
+        // When
+        marsRoverCommandExecutor.commandMarsRover(Command.MOVE
                 , Command.TURN_LEFT
                 , Command.MOVE
                 , Command.TURN_RIGHT);

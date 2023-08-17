@@ -21,6 +21,35 @@ public class MarsRover {
         this.location = location;
     }
 
+    public void move() {
+        switch (location.getDirection()) {
+            case NORTH:
+                location.incrementY();
+                break;
+            case SOUTH:
+                location.decrementY();
+                break;
+            case EAST:
+                location.incrementX();
+                break;
+            case WEST:
+                location.decrementX();
+                break;
+        }
+    }
+
+    public void turnLeft() {
+        location.setDirection(DIRECTION_PAIR_MAP.get(location.getDirection()));
+    }
+
+    public void turnRight() {
+        DIRECTION_PAIR_MAP.entrySet().stream()
+                .filter(directionDirectionEntry -> directionDirectionEntry.getValue().equals(location.getDirection()))
+                .findFirst()
+                .map(Map.Entry::getKey)
+                .ifPresent(direction -> location.setDirection(direction));
+    }
+
     public void executeCommand(Command... givenCommands) {
         Arrays.stream(givenCommands).forEachOrdered(givenCommand -> {
             if (givenCommand == Command.MOVE) {
@@ -41,15 +70,10 @@ public class MarsRover {
             }
 
             if (givenCommand == Command.TURN_LEFT) {
-                location.setDirection(DIRECTION_PAIR_MAP.get(location.getDirection()));
             }
 
             if (givenCommand == Command.TURN_RIGHT) {
-                DIRECTION_PAIR_MAP.entrySet().stream()
-                        .filter(directionDirectionEntry -> directionDirectionEntry.getValue().equals(location.getDirection()))
-                        .findFirst()
-                        .map(Map.Entry::getKey)
-                        .ifPresent(direction -> location.setDirection(direction));
+
             }
         });
     }

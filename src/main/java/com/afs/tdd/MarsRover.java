@@ -50,34 +50,6 @@ public class MarsRover {
                 .ifPresent(direction -> location.setDirection(direction));
     }
 
-    public void executeCommand(Command... givenCommands) {
-        Arrays.stream(givenCommands).forEachOrdered(givenCommand -> {
-            if (givenCommand == Command.MOVE) {
-                switch (location.getDirection()) {
-                    case NORTH:
-                        location.incrementY();
-                        break;
-                    case SOUTH:
-                        location.decrementY();
-                        break;
-                    case EAST:
-                        location.incrementX();
-                        break;
-                    case WEST:
-                        location.decrementX();
-                        break;
-                }
-            }
-
-            if (givenCommand == Command.TURN_LEFT) {
-            }
-
-            if (givenCommand == Command.TURN_RIGHT) {
-
-            }
-        });
-    }
-
     public Location getCurrentLocation() {
         return location;
     }

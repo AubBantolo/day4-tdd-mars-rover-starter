@@ -10,9 +10,9 @@ class MarsRoverTest {
         Location initialLocation = new Location(0, 0, Direction.NORTH);
         Command givenCommand = Command.MOVE;
         MarsRover marsRover = new MarsRover(initialLocation);
-        MarsRoverCommandExecutor marsRoverCommandExecutor = new MarsRoverCommandExecutor(marsRover);
+        Application marsRoverApplication = new Application(marsRover);
         // When
-        marsRoverCommandExecutor.commandMarsRover(givenCommand);
+        marsRoverApplication.commandMarsRover(givenCommand);
         Location currentLocation = marsRover.getCurrentLocation();
         // Then
         Assertions.assertEquals(0 , currentLocation.getX());
@@ -27,9 +27,9 @@ class MarsRoverTest {
         Command givenCommand = Command.TURN_LEFT;
         MarsRover marsRover = new MarsRover(initialLocation);
         // When
-        MarsRoverCommandExecutor marsRoverCommandExecutor = new MarsRoverCommandExecutor(marsRover);
+        Application marsRoverApplication = new Application(marsRover);
         // When
-        marsRoverCommandExecutor.commandMarsRover(givenCommand);
+        marsRoverApplication.commandMarsRover(givenCommand);
         Location currentLocation = marsRover.getCurrentLocation();
         // Then
         Assertions.assertEquals(0 , currentLocation.getX());
@@ -44,9 +44,9 @@ class MarsRoverTest {
         Command givenCommand = Command.TURN_RIGHT;
         MarsRover marsRover = new MarsRover(initialLocation);
         // When
-        MarsRoverCommandExecutor marsRoverCommandExecutor = new MarsRoverCommandExecutor(marsRover);
+        Application marsRoverApplication = new Application(marsRover);
         // When
-        marsRoverCommandExecutor.commandMarsRover(givenCommand);
+        marsRoverApplication.commandMarsRover(givenCommand);
         Location currentLocation = marsRover.getCurrentLocation();
         // Then
         Assertions.assertEquals(0 , currentLocation.getX());
@@ -61,9 +61,9 @@ class MarsRoverTest {
         Command givenCommand = Command.MOVE;
         MarsRover marsRover = new MarsRover(initialLocation);
         // When
-        MarsRoverCommandExecutor marsRoverCommandExecutor = new MarsRoverCommandExecutor(marsRover);
+        Application marsRoverApplication = new Application(marsRover);
         // When
-        marsRoverCommandExecutor.commandMarsRover(givenCommand);
+        marsRoverApplication.commandMarsRover(givenCommand);
         Location currentLocation = marsRover.getCurrentLocation();
         // Then
         Assertions.assertEquals(0 , currentLocation.getX());
@@ -78,9 +78,9 @@ class MarsRoverTest {
         Command givenCommand = Command.TURN_LEFT;
         MarsRover marsRover = new MarsRover(initialLocation);
         // When
-        MarsRoverCommandExecutor marsRoverCommandExecutor = new MarsRoverCommandExecutor(marsRover);
+        Application marsRoverApplication = new Application(marsRover);
         // When
-        marsRoverCommandExecutor.commandMarsRover(givenCommand);
+        marsRoverApplication.commandMarsRover(givenCommand);
         Location currentLocation = marsRover.getCurrentLocation();
         // Then
         Assertions.assertEquals(0 , currentLocation.getX());
@@ -95,9 +95,9 @@ class MarsRoverTest {
         Command givenCommand = Command.TURN_RIGHT;
         MarsRover marsRover = new MarsRover(initialLocation);
         // When
-        MarsRoverCommandExecutor marsRoverCommandExecutor = new MarsRoverCommandExecutor(marsRover);
+        Application marsRoverApplication = new Application(marsRover);
         // When
-        marsRoverCommandExecutor.commandMarsRover(givenCommand);
+        marsRoverApplication.commandMarsRover(givenCommand);
         Location currentLocation = marsRover.getCurrentLocation();
         // Then
         Assertions.assertEquals(0 , currentLocation.getX());
@@ -112,9 +112,9 @@ class MarsRoverTest {
         Command givenCommand = Command.MOVE;
         MarsRover marsRover = new MarsRover(initialLocation);
         // When
-        MarsRoverCommandExecutor marsRoverCommandExecutor = new MarsRoverCommandExecutor(marsRover);
+        Application marsRoverApplication = new Application(marsRover);
         // When
-        marsRoverCommandExecutor.commandMarsRover(givenCommand);
+        marsRoverApplication.commandMarsRover(givenCommand);
         Location currentLocation = marsRover.getCurrentLocation();
         // Then
         Assertions.assertEquals(1 , currentLocation.getX());
@@ -129,9 +129,9 @@ class MarsRoverTest {
         Command givenCommand = Command.TURN_LEFT;
         MarsRover marsRover = new MarsRover(initialLocation);
         // When
-        MarsRoverCommandExecutor marsRoverCommandExecutor = new MarsRoverCommandExecutor(marsRover);
+        Application marsRoverApplication = new Application(marsRover);
         // When
-        marsRoverCommandExecutor.commandMarsRover(givenCommand);
+        marsRoverApplication.commandMarsRover(givenCommand);
         Location currentLocation = marsRover.getCurrentLocation();
         // Then
         Assertions.assertEquals(0 , currentLocation.getX());
@@ -146,9 +146,9 @@ class MarsRoverTest {
         Command givenCommand = Command.TURN_RIGHT;
         MarsRover marsRover = new MarsRover(initialLocation);
         // When
-        MarsRoverCommandExecutor marsRoverCommandExecutor = new MarsRoverCommandExecutor(marsRover);
+        Application marsRoverApplication = new Application(marsRover);
         // When
-        marsRoverCommandExecutor.commandMarsRover(givenCommand);
+        marsRoverApplication.commandMarsRover(givenCommand);
         Location currentLocation = marsRover.getCurrentLocation();
         // Then
         Assertions.assertEquals(0 , currentLocation.getX());
@@ -163,9 +163,9 @@ class MarsRoverTest {
         Command givenCommand = Command.MOVE;
         MarsRover marsRover = new MarsRover(initialLocation);
         // When
-        MarsRoverCommandExecutor marsRoverCommandExecutor = new MarsRoverCommandExecutor(marsRover);
+        Application marsRoverApplication = new Application(marsRover);
         // When
-        marsRoverCommandExecutor.commandMarsRover(givenCommand);
+        marsRoverApplication.commandMarsRover(givenCommand);
         Location currentLocation = marsRover.getCurrentLocation();
         // Then
         Assertions.assertEquals(-1 , currentLocation.getX());
@@ -180,9 +180,9 @@ class MarsRoverTest {
         Command givenCommand = Command.TURN_LEFT;
         MarsRover marsRover = new MarsRover(initialLocation);
         // When
-        MarsRoverCommandExecutor marsRoverCommandExecutor = new MarsRoverCommandExecutor(marsRover);
+        Application marsRoverApplication = new Application(marsRover);
         // When
-        marsRoverCommandExecutor.commandMarsRover(givenCommand);
+        marsRoverApplication.commandMarsRover(givenCommand);
         Location currentLocation = marsRover.getCurrentLocation();
         // Then
         Assertions.assertEquals(0 , currentLocation.getX());
@@ -197,9 +197,9 @@ class MarsRoverTest {
         Command givenCommand = Command.TURN_RIGHT;
         MarsRover marsRover = new MarsRover(initialLocation);
         // When
-        MarsRoverCommandExecutor marsRoverCommandExecutor = new MarsRoverCommandExecutor(marsRover);
+        Application marsRoverApplication = new Application(marsRover);
         // When
-        marsRoverCommandExecutor.commandMarsRover(givenCommand);
+        marsRoverApplication.commandMarsRover(givenCommand);
         Location currentLocation = marsRover.getCurrentLocation();
         // Then
         Assertions.assertEquals(0 , currentLocation.getX());
@@ -213,9 +213,9 @@ class MarsRoverTest {
         Location initialLocation = new Location(0, 0, Direction.NORTH);
         MarsRover marsRover = new MarsRover(initialLocation);
         // When
-        MarsRoverCommandExecutor marsRoverCommandExecutor = new MarsRoverCommandExecutor(marsRover);
+        Application marsRoverApplication = new Application(marsRover);
         // When
-        marsRoverCommandExecutor.commandMarsRover(Command.MOVE
+        marsRoverApplication.commandMarsRover(Command.MOVE
                 , Command.TURN_LEFT
                 , Command.MOVE
                 , Command.TURN_RIGHT);

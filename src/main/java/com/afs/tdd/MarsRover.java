@@ -1,10 +1,21 @@
 package com.afs.tdd;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MarsRover {
 
     private Location location;
+
+    private static Map<Direction, Direction> DIRECTION_PAIR_MAP = new HashMap<>();
+
+    static {
+        DIRECTION_PAIR_MAP.put(Direction.NORTH, Direction.WEST);
+        DIRECTION_PAIR_MAP.put(Direction.SOUTH, Direction.EAST);
+        DIRECTION_PAIR_MAP.put(Direction.EAST, Direction.NORTH);
+        DIRECTION_PAIR_MAP.put(Direction.WEST, Direction.SOUTH);
+    }
 
     public MarsRover(Location location) {
         this.location = location;
@@ -30,27 +41,15 @@ public class MarsRover {
             }
 
             if (givenCommand == Command.TURN_LEFT) {
-                if (location.getDirection() == Direction.NORTH) {
-                    location.setDirection(Direction.WEST);
-                } else if (location.getDirection() == Direction.SOUTH) {
-                    location.setDirection(Direction.EAST);
-                } else if (location.getDirection() == Direction.EAST) {
-                    location.setDirection(Direction.NORTH);
-                } else if (location.getDirection() == Direction.WEST) {
-                    location.setDirection(Direction.SOUTH);
-                }
+                location.setDirection(DIRECTION_PAIR_MAP.get(location.getDirection()));
             }
 
             if (givenCommand == Command.TURN_RIGHT) {
-                if (location.getDirection() == Direction.WEST) {
-                    location.setDirection(Direction.NORTH);
-                } else if (location.getDirection() == Direction.EAST) {
-                    location.setDirection(Direction.SOUTH);
-                } else if (location.getDirection() == Direction.NORTH) {
-                    location.setDirection(Direction.EAST);
-                } else if (location.getDirection() == Direction.SOUTH) {
-                    location.setDirection(Direction.WEST);
-                }
+                DIRECTION_PAIR_MAP.entrySet().stream()
+                        .filter(directionDirectionEntry -> directionDirectionEntry.getValue().equals(location.getDirection()))
+                        .findFirst()
+                        .map(Map.Entry::getKey)
+                        .ifPresent(direction -> location.setDirection(direction));
             }
         });
     }

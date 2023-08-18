@@ -20,7 +20,7 @@ public class MarsRover {
     public MarsRover(Location location) {
         this.location = location;
     }
-
+//TODO for this one since I got the same conditional statements and got comment that need to change into polymorphism but code is greatly written
     public void move() {
         switch (location.getDirection()) {
             case NORTH:

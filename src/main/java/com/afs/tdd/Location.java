@@ -12,7 +12,7 @@ public class Location {
     public Direction getDirection() {
         return direction;
     }
-
+//TODO for this one i think if there's no usage for the setters can be removed
     public void setX(int x) {
         this.x = x;
     }
